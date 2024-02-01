@@ -23,7 +23,7 @@ jobs:
 
       - name: Build and Push
         id: docker_build
-        uses: docker/docker-push-action@v3
+        uses: docker/build-push-action@v3
         with:
           push: false
           tags: gtzucoloto/fs3-ci-github-actions:latest
