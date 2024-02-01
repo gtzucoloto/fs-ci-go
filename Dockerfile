@@ -1,4 +1,11 @@
-FROM ubuntu:latest
-LABEL authors="gtzuc"
+FROM golang:1.21
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+RUN go mod init teste
+
+COPY . .
+
+RUN go build -o math
+
+CMD ["./math"]
