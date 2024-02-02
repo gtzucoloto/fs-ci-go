@@ -12,6 +12,8 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: 1.21
+      - run: cd src
+      - run: ls
       - run: go version
       - run: go test
       - run: go run math.go

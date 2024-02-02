@@ -4,8 +4,8 @@ WORKDIR /app
 
 RUN go mod init teste
 
-COPY . .
+COPY ./src/ /app
 
-RUN go build -o math
+RUN go build -o ./math
 
 CMD ["./math"]
